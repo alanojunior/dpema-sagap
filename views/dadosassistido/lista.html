@@ -1,0 +1,25 @@
+<ion-header-bar align-title="center" class="bar-stable sub-header">
+   <div class="buttons">
+    <a href="#/dadosassistido" class="button fa fa-arrow-left button-clear"> Voltar </a>
+  </div>
+ 	<h1 class="title">Dados do Assistido - Lista</h1>
+  </ion-header-bar>
+  <br>
+  <br>	
+	<ion-list>
+	  <ion-item ng-repeat="item in itens">
+		
+	  <p><i class="icon ion-person-stalker"></i> <b>Assistido: </b> {{item.stratendido}}</p>
+	  <p><i class="icon ion-person-add"></i> <b>Nome Mãe: </b> {{item.strmae}}</p>
+	  <p> <i class="icon ion-calendar"></i> <b>Data Nascimento: </b>{{item.dtanascimento}}</p>
+		<button ng-click="ver(item)" class="button button-block button-balanced button-small">
+			<i class="icon ion-eye"></i> Detalhes
+		</button>
+	  </ion-item>
+	  <br>
+	  <center>
+	  		 <button class="button button-positive button-small  button-outline" ng-click="mais()"><i class="icon ion-arrow-down-c"></i> Ver mais</button>
+	  </center>
+	 
+	</ion-list>
+	

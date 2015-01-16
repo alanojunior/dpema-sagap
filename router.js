@@ -131,7 +131,7 @@ app.config(function($stateProvider,$urlRouterProvider,$httpProvider,APP){
                 url:"/historico",
                 templateUrl:APP.VIEWS+'/historico/index.html',
                 controller:"HistoricoCtrl"
-            })
+            })            
             .state('historicolista',{
                 url:"/historico/lista",
                 templateUrl:APP.VIEWS+'/historico/lista.html',
@@ -141,6 +141,21 @@ app.config(function($stateProvider,$urlRouterProvider,$httpProvider,APP){
                 url:"/historico/item",
                 templateUrl:APP.VIEWS+'/historico/item.html',
                 controller:"HistoricoItemController"
+            })
+            .state('dadosassistiso',{
+                url:"/dadosassistido",
+                templateUrl:APP.VIEWS+'/dadosassistido/index.html',
+                controller:"DadosassistidoCtrl"
+            })
+            .state('dadosassistidolista',{
+                url:"/dadosassistido/lista",
+                templateUrl:APP.VIEWS+'/dadosassistido/lista.html',
+                controller:"DadosassistidoListaController"
+            })
+            .state('dadosassistidoItem',{
+                url:"/dadosassistido/item",
+                templateUrl:APP.VIEWS+'/dadosassistido/item.html',
+                controller:"DadosassistidoItemController"
             })
             .state('juri',{
                 url:"/juri",

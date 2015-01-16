@@ -1,0 +1,69 @@
+<ion-header-bar align-title="center" class="bar-stable sub-header">
+  <div class="buttons">
+    <a href="#/acordoemediacao/lista" class="button fa fa-arrow-left button-clear"> Voltar </a>
+  </div>
+ 	<h1 class="title">Acordo e Mediação - Item</h1>
+  </ion-header-bar>
+<br>
+<br>
+<br>
+<ion-list>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-users"></i> Tipo
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.strtipocadastro}}</h4></ion-item>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-users"></i> Assistido(s)
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.stratendido}}</h4></ion-item>
+
+
+	<ion-item class="item-divider">
+	<i class="fa fa-users"></i> Funcionário
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.strfuncionario}}</h4></ion-item>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-user"></i>  Função 
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.strfuncionariofuncao}}</h4></ion-item>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-cogs"></i> Serviço
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.strservico}}</h4></ion-item>
+	
+	<ion-item class="item-divider">
+	<i class="fa fa-exclamation"></i> Asssunto
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.stracordo}}</h4></ion-item>
+		
+	<ion-item class="item-divider">
+	<i class="fa fa-exclamation"></i> Obteve Exito 
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.bolexito == "1" ? 'SIM' : 'NÃO'}}</h4></ion-item>
+	
+	<ion-item class="item-divider">
+	<i class="fa fa-exclamation"></i> Area de Atuação
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.strareaatuacao}}</h4></ion-item>
+	
+	<ion-item class="item-divider">
+	<i class="fa fa-exclamation"></i> Data
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.dtaacordo_format}}</h4></ion-item>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-exclamation"></i> Atuação em Substituição a outro Defensor
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.bolsubstituicao == "1" ? 'SIM' : 'NÃO'}}</h4></ion-item>
+	
+
+	<a ng-href="{{item.stracordosintese != null ? servidor+'SAGAP/defensor/acordoemediacao/'+item.intacordomediacaoid+'.pdf': servidor+'SAGAP_MOBILE/index.php/acordoemediacao/veracordoemediacao/'+item.intacordomediacaoid}}" target="_blank" class="button button-block button-balanced" onclick="window.open(this.href, '_system', 'location=yes'); return false;">
+      Ver Documento
+    </a>
+
+
+</ion-list>

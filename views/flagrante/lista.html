@@ -1,0 +1,31 @@
+<ion-header-bar align-title="center" class="bar-stable sub-header">
+   <div class="buttons">
+    <a href="#/flagrante" class="button fa fa-arrow-left button-clear"> Voltar </a>
+  </div>
+ 	<h1 class="title">Flagrante - Lista</h1>
+  </ion-header-bar>
+  <br>
+  <br>	
+	<ion-list>
+	  <ion-item ng-repeat="item in itens">
+	 
+      <p><i class="icon ion-forward"></i> <b>N° Flagrante: </b> {{item.intflagranteid}}</p>
+      <p> <i class="icon ion-calendar"></i> <b>Data do Flagrante: </b>{{item.dtaflagrante_format}}</p>
+      <p> <i class="icon ion-calendar"></i> <b>Data do Recebimento: </b>{{item.dtarecebimento_format}}</p>
+
+	  <p style="white-space: normal"><i class="icon ion-person-stalker"></i> <b>Assistido({{item.bolmaioridade == "1" && item.bolmenoridade == "1" ? 'Adulto e Adolescente' : ''}} {{item.bolmaioridade == "1" ? 'Adulto' : 'Adolescente'}}): </b> {{item.stratendido}}</p>
+	  <p style="white-space: normal"><i class="icon ion-person"></i> <b>Funcionário que Cadastrou: </b> {{item.strfuncionario}}</p>
+	 
+	  <p style="white-space: normal" ><i class="icon ion-flag"></i><b>Infração: </b>{{item.strinfracao}}</p>
+	  <p><i class="icon ion-location"></i> <b>Cidade: </b>{{item.strcidade}}</p>
+		<button ng-click="ver(item)" class="button button-block button-balanced button-small">
+			<i class="icon ion-eye"></i> Detalhes
+		</button>
+	  </ion-item>
+	  <br>
+	  <center>
+	  		 <button class="button button-positive button-small  button-outline" ng-click="mais()"><i class="icon ion-arrow-down-c"></i> Ver mais</button>
+	  </center>
+	 
+	</ion-list>
+	

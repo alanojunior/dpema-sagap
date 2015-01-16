@@ -1,0 +1,65 @@
+<ion-header-bar align-title="center" class="bar-stable sub-header">
+ 
+ 	<h1 class="title">Agenda</h1>
+  </ion-header-bar>
+  <br>
+  <br>	
+ <div style="margin-top:5px;text-align:center;color:red">
+    {{msg}}
+   
+  </div>
+
+  <div class="list list-inset">
+	<label  class="item item-input">
+	  <span class="input-label">Data Inicial: </span>
+	  <input ng-model="valor['dtainicio']" type="date" />
+	</label>
+	<label  class="item item-input">
+	  <span class="input-label">Data Final: </span>
+	  <input ng-model="valor['dtafim']" type="date" />
+	</label>
+	<button ng-click="buscar(valor)" class="button button-block button-dark">
+      Buscar
+       <i class="fa fa-search"></i>
+    </button>
+    <br>
+    <button class="button button-light" ng-show="buttons" ng-class="[style1]" ng-click="ordinario = true; style1 = 'button-stable';style2 = 'button-light'; extraordinario= false" class="button">
+      Ordinario     
+    </button>
+    <button class="button button-light" ng-show="buttons" ng-class="[style2]" ng-click="style2 = 'button-stable';style1 = 'button-light'; ordinario = false; extraordinario= true" class="button">
+      Extraordinario     
+    </button>
+</div>
+
+  <ion-list ng-show="ordinario">
+	  <ion-item class="item-divider" >
+	  Serviços Ordinários
+	  	
+	  </ion-item>
+	  <ion-item ng-repeat="item in itens.ordinario">
+	   <p><i class="fa fa-user"></i> <b>Assistido: </b> {{item.Atendido}}</p>
+	   <p><i class="icon ion-clock"></i> <b>Hora: </b> {{item.Hora}}</p>
+	   <p><i class="fa fa-calendar"></i> <b>Data: </b> {{item.Data}}</p>   
+	  </ion-item>
+	  <br>
+	  <center>
+	  		 <button class="button button-positive button-small  button-outline" ng-click="mais(1)"><i class="icon ion-arrow-down-c"></i> Ver mais</button>
+	  </center>
+   
+</ion-list>
+
+<ion-list  ng-show="extraordinario">
+	 <ion-item class="item-divider">
+	  Serviços Extraordinárias
+	  	
+	  </ion-item>
+	   <ion-item ng-repeat="item in itens.extraordinario">
+	    <p><i class="fa fa-user"></i> <b>Assistido: </b> {{item.Atendido}}</p>
+	   <p><i class="icon ion-clock"></i> <b>Hora: </b> {{item.Hora}}</p>
+	   <p><i class="fa fa-calendar"></i> <b>Data: </b> {{item.Data}}</p>  
+	  </ion-item>
+	   <br>
+	   <center>
+	  		 <button class="button button-positive button-small  button-outline" ng-click="mais(2)"><i class="icon ion-arrow-down-c"></i> Ver mais</button>
+	  </center>
+</ion-list>

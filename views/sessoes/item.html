@@ -1,0 +1,109 @@
+<ion-header-bar align-title="center" class="bar-stable sub-header">
+  <div class="buttons">
+    <a href="#/sessoes" class="button fa fa-arrow-left button-clear"> Voltar </a>
+  </div>
+  <h1 class="title">Detalhes da  {{item.nome}}</h1>
+  </ion-header-bar> 
+  <br>
+  <br>
+
+  <ion-list class="white-space-none">
+	  <ion-item class="item-divider">
+	     CONVOCAÇÃO CONSELHO	  	
+	  </ion-item>
+	  <ion-item ng-show="conselhorepeat">
+	    Nenhuma convocação do conselho <i class="fa fa-exclamation"></i>	  		
+	  </ion-item>
+	  <ion-item ng-repeat="i in conselho">
+	  <a onclick="window.open(this.href, '_system', 'location=yes'); return false;" ng-href="{{pdf+i.strarquivopdf}}" target="_blank">
+	  	<i class="icon ion-eye"></i> Visualizar Conselho
+	  	</a>
+	  </ion-item>
+
+	   <ion-item class="item-divider">
+	     PAUTAS	  	
+	  </ion-item>
+	  <ion-item ng-show="pautarepeat">
+	    Nenhuma pauta do conselho <i class="fa fa-exclamation"></i>	  		
+	  </ion-item>
+	  <ion-item ng-repeat="i in pauta">
+	  <a onclick="window.open(this.href, '_system', 'location=yes'); return false;" ng-href="{{pdf+i.strarquivopdf}}" target="_blank">
+	  	<i class="icon ion-eye"></i> Visualizar Pauta
+	  	</a>
+	  </ion-item>
+	   <ion-item class="item-divider">
+	     FREQUENCIA	  	
+	  </ion-item>
+	   <ion-item ng-show="frequenciarepeat">
+	    Nenhuma frequência do conselho <i class="fa fa-exclamation"></i>	  		
+	  </ion-item>
+	  <ion-item ng-repeat="i in frequencia">
+	  <a onclick="window.open(this.href, '_system', 'location=yes'); return false;" ng-href="{{pdf+i.strarquivopdf}}" target="_blank">
+	  	<i class="icon ion-eye"></i> Visualizar frequência
+	  	</a>
+	  </ion-item>
+	   <ion-item class="item-divider">
+	     ATAS	  	
+	  </ion-item>
+	   <ion-item ng-show="atasrepeat">
+	    Nenhuma  ata registrada <i class="fa fa-exclamation"></i>	  		
+	  </ion-item>
+	  <ion-item ng-repeat="i in atas">
+	  <a onclick="window.open(this.href, '_system', 'location=yes'); return false;" ng-href="{{pdf+i.strarquivopdf}}" target="_blank">
+	  	<i class="icon ion-eye"></i> Visualizar Ata
+	  	</a>
+	  </ion-item>
+	   <ion-item class="item-divider">
+	     PROCESSOS DISTRIBUÍDOS	  	
+	  </ion-item>
+	   <ion-item ng-repeat="i in processos">
+	  	 <p><i class="fa fa-retweet"></i> <b>Num. processo: </b> {{i.intnumprocesso}}</p>
+  		 <p><i class="fa fa-calendar"></i> <b>Data: </b> {{i.dtaprocesso}}</p>
+  		 <div class="white-space-none" style="text-transform: uppercase"><p><i class="fa fa fa-file-word-o"></i> <b>Assunto: </b> {{i.strassunto}}</p></div>
+  		 <p><i class="fa fa-user"></i> <b>Relator: </b> {{i.strfuncionario}}</p>
+	  </ion-item>
+	  <ion-item ng-show="processosrepeat">
+	    Nenhum processo registrado <i class="fa fa-exclamation"></i>	  		
+	  </ion-item>
+	   <ion-item class="item-divider">
+	     PARECER	  	
+	  </ion-item>
+	   <ion-item ng-show="pareceresrepeat">
+	    Nenhuma parecer registrado <i class="fa fa-exclamation"></i>	  		
+	  </ion-item>
+	  <ion-item ng-repeat="i in pareceres">
+	  	<p style="text-transform: uppercase"><i class="fa fa-retweet"></i> <b>Título do Documento: </b> {{i.strtitulodocumento}}</p>
+	  	<a onclick="window.open(this.href, '_system', 'location=yes'); return false;" ng-href="{{pdf+i.strarquivopdf}}" target="_blank"><i class="icon ion-eye"></i> Visualizar Parecer</a>
+	  </ion-item>
+	   <ion-item class="item-divider">
+	     REQUERIMENTO	  	
+	  </ion-item>
+	  <ion-item ng-show="requerimentosrepeat">
+	    Nenhum requerimento registrado <i class="fa fa-exclamation"></i>	  		
+	  </ion-item>
+	  <ion-item ng-repeat="i in requerimentos">
+	  	<p style="text-transform: uppercase"><i class="fa fa-retweet"></i> <b>Título do Documento: </b> {{i.strtitulodocumento}}</p>
+	  	<a onclick="window.open(this.href, '_system', 'location=yes'); return false;" ng-href="{{pdf+i.strarquivopdf}}" target="_blank"><i class="icon ion-eye"></i> Visualizar requerimento</a>
+	  </ion-item>
+	   <ion-item class="item-divider">
+	     OFÍCIOS	  	
+	  </ion-item>
+	  <ion-item ng-show="oficiosrepeat">
+	    Nenhum oficio registrado <i class="fa fa-exclamation"></i>	  		
+	  </ion-item>
+	  <ion-item ng-repeat="i in oficios">
+	  	<p style="text-transform: uppercase"><i class="fa fa-retweet"></i> <b>Título do Documento: </b> {{i.strtitulodocumento}}</p>
+	  	<a onclick="window.open(this.href, '_system', 'location=yes'); return false;" ng-href="{{pdf+i.strarquivopdf}}" target="_blank"><i class="icon ion-eye"></i> Visualizar requerimento</a>
+	  </ion-item>
+	   <ion-item class="item-divider">
+	     DOCUMENTOS DIVERSOS	  	
+	  </ion-item>
+	  <ion-item ng-show="docdiversosrepeat">
+	    Nenhum documento diverso registrado <i class="fa fa-exclamation"></i>	  		
+	  </ion-item>
+	  <ion-item ng-repeat="i in docdiversos">
+	  	<p style="text-transform: uppercase"><i class="fa fa-retweet"></i> <b>Título do Documento: </b> {{i.strtitulodocumento}}</p>
+	  	<a onclick="window.open(this.href, '_system', 'location=yes'); return false;" ng-href="{{pdf+i.strarquivopdf}}" target="_blank"><i class="icon ion-eye"></i> Visualizar requerimento</a>
+	  </ion-item>
+
+  </ion-list>

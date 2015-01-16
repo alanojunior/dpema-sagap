@@ -1,0 +1,23 @@
+{{itens}}	
+	<ion-list>
+	  <ion-item ng-repeat="item in itens">
+		
+      <p><i class="icon ion-forward"></i> <b>N° Proc.: </b> {{item.processo}}</p>
+	  <p><i class="icon ion-person-stalker"></i> <b>Assistido: </b> {{item.stratendido}}</p>
+	  <p><i class="icon ion-person"></i> <b>Defensor: </b> {{item.funcionario}}</p>
+	  
+	  <p><i class="icon ion-person-add"></i> <b>Participaçao: </b> {{item.participacao}}</p>
+	  <p><i class="icon ion-flag"></i> <b>Área de Atuação: </b>{{item.strareaatuacao}}</p>
+	  <p><i class="icon ion-location"></i> <b>Comarca/Vara: </b>{{item.comarca}} / {{item.vara}}</p>
+	  <p> <i class="icon ion-calendar"></i> <b>Data: </b>{{item.dtaaudiencia}}</p>
+		<button ng-click="ver(item)" class="button button-block button-balanced button-small">
+			<i class="icon ion-eye"></i> Detalhes
+		</button>
+	  </ion-item>
+	  <br>
+	  <center>
+	  		 <button class="button button-positive button-small  button-outline" ng-click="mais()"><i class="icon ion-arrow-down-c"></i> Ver mais</button>
+	  </center>
+	 
+	</ion-list>
+	

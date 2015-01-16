@@ -1,0 +1,92 @@
+<ion-header-bar align-title="center" class="bar-stable sub-header">
+  <div class="buttons">
+    <a href="#/peticao/lista" class="button fa fa-arrow-left button-clear"> Voltar </a>
+  </div>
+ 	<h1 class="title">Petição - Item</h1>
+  </ion-header-bar>
+<br>
+<br>
+<br>
+<ion-list>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-cogs"></i> N° da Petição
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.intnumpeticaoid}} </h4></ion-item>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-cogs"></i> Serviço
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.inttiposervicoid_peticao == "" || item.inttiposervicoid == 1 ? 'Extraordinário' : 'Ordinário'}}</h4></ion-item>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-users"></i> Assistido(s)
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.atendido}}</h4></ion-item>
+	
+	<ion-item class="item-divider">
+	<i class="fa fa-gear"></i> N° Processo
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.processo}}</h4></ion-item>
+	
+	<ion-item class="item-divider">
+	<i class="fa fa-exclamation"></i> Plantão
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{(item.bolplantao == '1' || item.bolplantao == '1') ? 'SIM' : 'NÃO'}}</h4></ion-item>
+	
+	<ion-item class="item-divider">
+	<i class="fa fa-exclamation"></i> Ação Consensual
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{(item.bolconsensual == '1' || item.bolconsensual == '1') ? 'SIM' : 'NÃO'}}</h4></ion-item>
+	
+	<ion-item class="item-divider">
+	<i class="fa fa-exclamation"></i> Atuação em Substituição a outro Defensor
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.atuacaosubstituicao == "" || item.atuacaosubstituicao == null ? 'NÃO' : 'SIM'}}</h4></ion-item>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-exclamation"></i> Extrajudicial
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{(item.bolextrajudicial == '1') ? 'SIM' : 'NÃO'}} <br/> 
+
+	{{(item.bolextrajudicial == '1') ? item.strorgaoextrajud : ''}}  </h4></ion-item>
+
+	<ion-item class="item-divider">
+		<i class="fa fa-calendar"></i> Data
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.dtadocumento_format}}</h4></ion-item>
+	<ion-item class="item-divider">
+		<i class="fa fa-institution"></i> Comarca
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.comarca}}</h4></ion-item>
+	<ion-item class="item-divider">
+		<i class="fa fa-flag"></i> Vara
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.vara}}</h4></ion-item>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-flask"></i> Área da Petição
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.strareaatuacao}}</h4></ion-item>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-flask"></i> Classe DPE
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.strclassedpe}}</h4></ion-item>
+	
+	<ion-item class="item-divider">
+	<i class="fa fa-flask"></i> Síntese dos Fatos
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.strsintesefatos}}</h4></ion-item>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-flask"></i> Status da Petição
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{(item.bolconsensual == '1') ? 'Aberto' : 'Finalizado'}}</h4></ion-item>
+
+
+	<a ng-href="{{item.strdocumento != null ? servidor+'SAGAP/defensor/peticao/'+item.intnumpeticaoid+'.pdf':servidor+ 'SAGAP_MOBILE/index.php/peticao/verpeticao/'+item.intnumpeticaoid}}" target="_blank" class="button button-block button-balanced" onclick="window.open(this.href, '_system', 'location=yes'); return false;">
+      Ver Documento
+    </a>
+
+</ion-list>

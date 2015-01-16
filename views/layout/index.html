@@ -1,0 +1,42 @@
+<ion-tabs class="tabs-positive tabs-icon-top">
+<ion-tab title="Pagina Inicial" icon-on="ion-ios7-home" icon-off="ion-ios7-home-outline">
+<ion-pane>
+    <ion-side-menus>
+        <ion-side-menu-content>
+
+            <ion-header-bar align-title="center" class="bar-positive">
+              <div class="buttons">
+                <button ng-show="button" ng-click="back(viewback)" class="button icon-left ion-arrow-left-b button-clear"></button>
+                <button class="button button-icon fa fa-navicon fa-2" ng-click="toggleLeft()"></button>
+              </div>
+              <h1 class="title">SAGAP MOBILE</h1>
+              <div class="buttons">
+                <button ng-click="toggleRight()" class="button button-icon  fa fa-phone fa-2"></button>
+              </div>
+            </ion-header-bar>
+            <ion-content> 
+           
+             <ion-nav-view animation="no-animation"></ion-nav-view>
+             
+            </ion-content>
+            
+        </ion-side-menu-content>
+
+        
+        <ng-include src="'app/views/layout/side.left.html'"></ng-include>
+        <ng-include src="'app/views/layout/side.right.html'"></ng-include>
+
+
+        
+    </ion-side-menus>
+</ion-pane>
+</ion-tab>
+
+<ion-tab title="Configuraçoes" ng-controller="ConfigController" icon-on="ion-ios7-gear" icon-off="ion-ios7-gear-outline">
+  <ng-include src="'app/views/configuracao/index.html'"></ng-include>
+  </ion-tab>
+
+  <ion-tab title="Sobre" icon-on="ion-ios7-information" icon-off="ion-ios7-information-outline">
+    <ng-include src="'app/views/about/index.html'"></ng-include>
+  </ion-tab>
+</ion-tabs>

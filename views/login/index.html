@@ -1,0 +1,40 @@
+<ion-pane ng-controller="LoginController">
+  <br>
+  <br>
+	<center>
+		  <img src="img/logo.png" width="200"/>
+
+	</center>
+  <div style="margin-top:5px;text-align:center;color:red">
+    {{msg}}
+   
+  </div>
+	<div class="list list-inset">
+    <label class="item item-input">
+      <i class="icon ion-person placeholder-icon"></i>
+      
+      <input type="text" ng-model="user" placeholder="Usuário">
+    </label>
+    <label class="item item-input">
+      <i class="icon ion-locked placeholder-icon"></i>
+
+      <input type="password" ng-model="password" placeholder="Senha">
+    </label>
+    <button ng-click="login(user,password)" class="button button-block button-positive">
+      Entrar
+       <i class="fa fa-sign-in"></i>
+
+    </button>
+       <div align="center"> 
+        <button ng-click="esqueci()" class="button button-outline button-small button-assertive">
+          Esqueceu a senha
+           <i class="icon ion-help"></i>
+        </button>
+      </div>
+      <div style="margin-top:5px" align="center"> 
+        <strong>Divisão de Analise e Desenvolvimento de Sistemas</strong>
+        <br>
+        SUINFO (Supervisão de Informática) 
+      </div>
+  </div>
+</ion-pane>

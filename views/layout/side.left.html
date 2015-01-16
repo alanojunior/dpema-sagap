@@ -1,0 +1,19 @@
+<ion-side-menu side="left">
+	<ion-content>
+	<ion-list>
+		<ion-item style="text-align:center" class="item-divider">
+			<i class="fa fa-cogs"></i> Menu
+		</ion-item>
+		<ion-item ng-repeat="menu in menus" ng-href="#{{menu.href}}">
+			<i class="{{menu.icon}}"> </i> {{menu.name}}
+		</ion-item>
+		
+		<ion-item style="text-align:center" class="item-divider">
+			<i class="fa fa-sliders"></i> Sistema
+		</ion-item>
+		<ion-item ng-click="logout()">
+			<i class="fa fa-sign-out"></i> Sair
+		</ion-item>
+	</ion-list>
+	</ion-content>
+</ion-side-menu>

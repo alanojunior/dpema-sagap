@@ -1,0 +1,57 @@
+<ion-header-bar align-title="center" class="bar-stable sub-header">
+  <div class="buttons">
+    <a href="#/docsdiversos/lista" class="button fa fa-arrow-left button-clear"> Voltar </a>
+  </div>
+ 	<h1 class="title">Documentos Diversos - Item</h1>
+  </ion-header-bar>
+<br>
+<br>
+<br>
+<ion-list>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-users"></i> Tipo de Documento
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.strtipo}}</h4></ion-item>
+	
+	<ion-item class="item-divider">
+	<i class="fa fa-users"></i> Nº do Documento
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.numregistro}}</h4></ion-item>
+	
+	<ion-item class="item-divider">
+	<i class="fa fa-users"></i> Assistido(s)
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.stratendido}}</h4></ion-item>
+		
+	<ion-item class="item-divider">
+	<i class="fa fa-users"></i> Funcionário
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.strfuncionario}}</h4></ion-item>
+	
+	<ion-item class="item-divider">
+	<i class="fa fa-cogs"></i> Serviço
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.strservico}}</h4></ion-item>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-exclamation"></i> Atuação em Substituição a outro Defensor
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.bolsubstituicao == "1" ? 'SIM' : 'NÃO'}}</h4></ion-item>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-exclamation"></i> Plantão
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.bolplantao == "1" ? 'SIM' : 'NÃO'}}</h4></ion-item>
+
+	<ion-item class="item-divider">
+	<i class="fa fa-calendar"></i> Data
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.dtadocumento_format}}</h4></ion-item>
+	
+	<a hre ng-href="{{item.strtexto == null ? servidor+'SAGAP/defensor/diversos/'+item.intdiversosid+'.pdf': servidor+'SAGAP_MOBILE/index.php/docdiversos/verdocdiverso/'+item.intdiversosid}}" target="_blank" class="button button-block button-balanced" onclick="window.open(this.href, '_system', 'location=yes'); return false;" ng-href="{{pdf+i.strarquivopdf}}">
+      Ver Documento
+    </a>
+
+
+</ion-list>

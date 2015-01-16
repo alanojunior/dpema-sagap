@@ -1,0 +1,60 @@
+<ion-header-bar align-title="center" class="bar-stable sub-header">
+  <div class="buttons">
+    <a href="#/flagrante/lista" class="button fa fa-arrow-left button-clear"> Voltar </a>
+  </div>
+ 	<h1 class="title">Flagrante - Item</h1>
+  </ion-header-bar>
+<br>
+<br>
+<br>
+<ion-list >
+
+	
+	<ion-item class="item-divider">
+	<i class="fa fa-calendar"></i>  Data do Flagrante:
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.dtaflagrante_format}}</h4></ion-item>
+	
+	<ion-item class="item-divider">
+	<i class="fa fa-calendar"></i>  Data do Recebimento:
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.dtarecebimento_format}}</h4></ion-item>
+	
+
+	<ion-item class="item-divider">
+	<i class="fa fa-user"></i> Funcionário que Cadastrou: 
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i>{{item.strfuncionario}}</h4></ion-item>
+	
+	<ion-item class="item-divider">
+	<i class="fa fa-folder-open"></i> Infração: 
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i> {{item.strinfracao}}</h4></ion-item>
+	
+	<ion-item class="item-divider">
+	<i class="fa fa-exclamation"></i> Cidade
+	</ion-item>
+	<ion-item><h4><i class="fa fa-share"></i>{{item.strcidade}}</h4></ion-item>
+
+
+
+	<ion-item ng-repeat="itens in item_flagrante">
+
+
+	<ion-item class="item-divider">
+	<i class="fa fa-exclamation"></i> Providência {{$index+1}}
+	</ion-item>
+	<br/>	
+      <p><i class="fa fa-user"></i> <b>Defensor: </b> {{itens.strfuncionario}}</p>
+      <p><i class="icon ion-calendar"></i> <b>Data da Analise: </b> {{itens.dtaanalise_format}}</p>
+      <p><i class="icon ion-forward"></i> <b>Serviço: </b> {{itens.strservico}}</p>      
+      <p><i class="icon ion-person-stalker"></i> <b>Substituição: </b> {{itens.bolsubstituicao == "1" ? 'SIM' : 'NAO'}}</p>
+	  <p><i class="icon ion-person"></i> <b>Plantão: </b> {{itens.bolplantao == "1" ? 'SIM' : 'NAO'}}</p>
+	  <p><i class="icon ion-flag"></i> <b>Houve Providências: </b> {{itens.bolprovidencia == "1" ? 'SIM' : 'NAO'}}</p>
+	  <p style="white-space: normal"><i class="icon ion-flag"></i> <b>Providências: </b>{{itens.strprovidencia}}</p>
+	</ion-item>
+
+</ion-list>
+
+	
+

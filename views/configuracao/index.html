@@ -1,0 +1,80 @@
+<ion-header-bar align-title="center" class="bar-stable sub-header">
+  	<h1 class="title">Configuracao</h1>
+	<div class="buttons">
+		<button  ng-hide="editar" ng-click="editar = true" class="button button-stable"> Editar </button>
+		<button ng-show="editar" ng-click="salvar(valor); editar = false" class="button button-stable"> Salvar </button>
+	</div>
+
+<div style="margin-top:5px;text-align:center;color:red">
+    {{msg}}   
+  </div>
+	
+</ion-header-bar>
+<br />
+<br />
+<br />
+<ion-content>
+<ion-list ng-hide="editar" class="has-header">
+	<ion-item class="item-divider">
+		<i class="fa fa-users"></i> Dados Pessoais
+	</ion-item>
+	<ion-item><b>Nome: </b>{{item.nome}}</ion-item>
+	<ion-item><b>CPF: </b>{{item.cpf}}</ion-item>
+	<ion-item><b>Celular: </b>{{item.celular}}</ion-item>
+	<ion-item><b>Nascimento: </b>{{item.nascimento}}</ion-item>
+	
+	<ion-item class="item-divider">
+		<i class="fa fa-gear"></i> Endereco
+	</ion-item>
+	<ion-item><b>Rua: </b>{{item.endereco}}</ion-item>
+	<ion-item><b>Cep: </b>{{item.cep}}</ion-item>
+	<ion-item><b>Complemento: </b>{{item.complemento}}</ion-item>
+	
+
+</ion-list>
+
+<ion-list ng-show="editar">
+	<ion-item class="item-divider">
+		<i class="fa fa-users"></i>  Dados Pessoais
+	</ion-item>
+         
+      
+    <label style="" class="item item-input">
+            <span class="input-label">Nome: </span>
+            <input type="text" value="{{item.nome}}" readonly />
+        </label>
+    
+	<label style="" class="item item-input">
+	        <span class="input-label">CPF: </span>
+	        <input type="text" value="{{item.cpf}}" readonly />
+	    </label>
+    
+	<label style="" class="item item-input">
+	        <span class="input-label">Celular: </span>
+	        <input type="text" value="{{item.celular}}" placeholder="{{item.celular}}" ng-model="valor.celular"  />
+	    </label>
+    
+	<label style="" class="item item-input">
+	        <span class="input-label">Nascimento: </span>
+	        <input type="text" value="{{item.nascimento}}" readonly />
+	    </label>
+	
+	<ion-item class="item-divider">
+		<i class="fa fa-gear"></i> Endereco
+	</ion-item>
+	<label style="" class="item item-input">
+        <span class="input-label">Rua: </span>
+       <input type="text" ng-model="valor.endereco" value="{{item.endereco}}" placeholder="{{item.endereco}}" />
+    </label>
+	<label style="" class="item item-input">
+        <span class="input-label">Cep: </span>
+      <input type="text" ng-model="valor.cep" value="{{item.cep}}" placeholder="{{item.cep}}" />
+    </label>
+    <label style="" class="item item-input">
+        <span class="input-label">Complemento: </span>
+        <input type="text" ng-model="valor.complemento" value="{{item.complemento}}" placeholder="{{item.complemento}}" />
+    </label>
+
+</ion-list>
+<!--{"cpf":1,"cep":2,"endereco":"rua","complemento":"teste","celular":98,"nascimento":"10/10/2012","nome":"administrador"}-->
+</ion-content>

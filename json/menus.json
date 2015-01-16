@@ -1,0 +1,18 @@
+[
+		{"name":"Página Principal","href":"/","icon":"fa fa-home"},
+		{"name":"Agenda","href":"/agenda","icon":"fa fa-calendar"},
+		{"name":"Histórico do Assistido.","href":"/historico","icon":"fa fa-user"},
+		{"name":"Petições","href":"/peticao","icon":"fa fa-clipboard"},		
+		{"name":"Documentos Diversos","href":"/docsdiversos","icon":"fa fa-file-text-o"},
+		{"name":"Acordos e Mediações","href":"/acordoemediacao","icon":"fa fa-files-o"},
+		{"name":"Flagrantes","href":"/flagrante","icon":"fa fa-files-o"},		
+		{"name":"Audiência","href":"/audiencia","icon":"fa fa-gavel"},
+		{"name":"Júri","href":"/juri","icon":"fa fa-gavel"},
+		{"name":"Intimações","href":"/intimacao","icon":"fa fa-bullhorn"},
+		{"name":"Sessões do Conselho","href":"/sessoes","icon":"fa fa-university"}
+
+
+
+
+	]
+

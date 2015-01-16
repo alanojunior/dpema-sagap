@@ -1,0 +1,31 @@
+<ion-header-bar align-title="center" class="bar-stable sub-header">
+   <div class="buttons">
+    <a href="#/peticao" class="button fa fa-arrow-left button-clear"> Voltar </a>
+  </div>
+ 	<h1 class="title">Petição - Lista</h1>
+  </ion-header-bar>
+  <br>
+  <br>	
+	<ion-list>
+	  <ion-item ng-repeat="item in itens">
+	
+	  <p><i class="icon ion-forward"></i> <b>N° da Petição: </b> {{item.intnumpeticaoid}}</p>
+	  <p><i class="icon ion-flag"></i> <b>Petição: </b>{{item.procedimento}}</p>
+	  <p><i class="icon ion-forward"></i> <b>N° Proc.: </b> {{item.processo}}</p>
+	  <p><i class="icon ion-person-stalker"></i> <b>Assistido: </b> {{item.atendido}}</p>
+	  <p><i class="icon ion-person"></i> <b>Defensor: </b> {{item.funcionario}}</p>
+	  	  
+	  <p><i class="icon ion-flag"></i> <b>Área de Atuação: </b>{{item.strareaatuacao}}</p>
+	  <p><i class="icon ion-location"></i> <b>Classe DPE: </b>{{item.strclassedpe}} / {{item.strclassedpe}}</p>
+	  <p> <i class="icon ion-calendar"></i> <b>Data: </b>{{item.dtadocumento_format}}</p>
+		<button ng-click="ver(item)" class="button button-block button-balanced button-small">
+			<i class="icon ion-eye"></i> Detalhes
+		</button>
+	  </ion-item>
+	  <br>
+	  <center>
+	  		 <button class="button button-positive button-small  button-outline" ng-click="mais()"><i class="icon ion-arrow-down-c"></i> Ver mais</button>
+	  </center>
+	 
+	</ion-list>
+	

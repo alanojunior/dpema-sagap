@@ -1,0 +1,128 @@
+<ion-header-bar align-title="center" class="bar-stable sub-header">
+  <div class="buttons">
+    <a href="#/historico/lista" class="button fa fa-arrow-left button-clear"> Voltar </a>
+  </div>
+ 	<h1 class="title">Historico - Item</h1>
+  </ion-header-bar>
+<br>
+<br>
+<br>
+<ion-list>
+	<ion-item class="item-divider">
+		<i class="fa fa-users"></i> Dados Assistido(s)
+	</ion-item>
+	<ion-item>
+		<h4>Assistido(s): {{item.stratendido}}</h4>
+	</ion-item>
+	<ion-item>
+		<h4>Naturalidade: {{item.strnaturalidade}}</h4>
+	</ion-item>
+	<ion-item>
+		<h4>Estado Civil: {{item.strestadocivil}}</h4>
+	</ion-item>
+	<ion-item>
+		<h4>Profissão: {{item.strprofissao}}</h4>
+	</ion-item>
+	<ion-item>
+		<h4>RG: {{item.strnumero}}</h4>
+	</ion-item>
+	<ion-item>
+		<h4>CPF: {{item.strnumero2}}</h4>
+	</ion-item>
+	<ion-item>
+		<h4>Endereco: {{item.strendereco}}</h4>
+	</ion-item>
+	<ion-item>
+		<h4>Bairro: {{item.strbairro}}</h4>
+	</ion-item>
+	<ion-item>
+		<h4>Cidade: {{item.strcidade}}</h4>
+	</ion-item>
+	<ion-item>
+		<h4>Estado: {{item.struf}}</h4>
+	</ion-item>
+	<ion-item>
+		<h4>Data: {{item.dtanascimento_format}}</h4>
+	</ion-item>
+	<ion-item>
+		<h4>Tel. Fixo: {{item.strfoneresidencial}}</h4>
+	</ion-item>
+	<ion-item>
+		<h4>Celular: {{item.strcelular}}</h4>
+	</ion-item>
+
+	
+
+</ion-list>
+
+<ion-item class="item-divider">
+		<i class="fa fa-users"></i> Atendimentos
+	</ion-item>
+	
+	<ion-item ng-repeat="itens in item_atendimentos">
+      <p><i class="icon ion-forward"></i> <b>Data: </b> {{itens.Data}}</p>
+      <p><i class="icon ion-forward"></i> <b>Horario: </b> {{itens.Horario}}</p>      
+      <p><i class="icon ion-person-stalker"></i> <b>Tipo Atendimento: </b> {{itens.Tipo}}</p>
+	  <p><i class="icon ion-person"></i> <b>Quem Atendeu: </b> {{itens.Quem}}</p>
+	  
+	</ion-item>
+
+<ion-item class="item-divider">
+		<i class="fa fa-users"></i> Petições
+	</ion-item>
+	
+	<ion-item ng-repeat="itens in item_historicopeticoes">
+      <p><i class="icon ion-forward"></i> <b>Data: </b> {{itens.Data}}</p>
+      <p><i class="icon ion-forward"></i> <b>Número Petição: </b> {{itens.intnumpeticaoid}}</p>      
+      <p><i class="icon ion-person-stalker"></i> <b>Número Processo: </b> {{itens.intnumprocesso}}</p>
+	  <p><i class="icon ion-person"></i> <b>Defensor: </b> {{itens.strfuncionario}}</p>
+	  
+	</ion-item>
+
+<ion-item class="item-divider">
+		<i class="fa fa-users"></i> Audiências
+	</ion-item>
+	
+	<ion-item ng-repeat="itens in item_historicoaudiencias">
+      <p><i class="icon ion-forward"></i> <b>Data: </b> {{itens.Data}}</p>
+      <p><i class="icon ion-forward"></i> <b>NParticipação: </b> {{itens.participacao}}</p>      
+      <p><i class="icon ion-person-stalker"></i> <b>Número Processo: </b> {{itens.processo}}</p>
+	  <p><i class="icon ion-person"></i> <b>Defensor: </b> {{itens.funcionario}}</p>
+	  
+	</ion-item>
+
+<ion-item class="item-divider">
+		<i class="fa fa-users"></i> Ofícios, Comunicações Internas e Outros
+	</ion-item>
+	
+	<ion-item ng-repeat="itens in item_historicodocs">
+      <p><i class="icon ion-forward"></i> <b>Data: </b> {{itens.dtadocumento}}</p>
+      <p><i class="icon ion-forward"></i> <b>Número Registro: </b> {{itens.numregistro}}</p>      
+      <p><i class="icon ion-person-stalker"></i> <b>Tipo: </b> {{itens.strtipo}}</p>
+	  <p><i class="icon ion-person"></i> <b>Defensor: </b> {{itens.strfuncionario}}</p>
+	  
+	</ion-item>
+
+<ion-item class="item-divider">
+		<i class="fa fa-users"></i> Flagrantes
+	</ion-item>
+	
+	<ion-item ng-repeat="itens in item_historicoflagrantes">
+      <p><i class="icon ion-forward"></i> <b>Data flagrante: </b> {{itens.dtaflagrante}}</p>
+      <p><i class="icon ion-forward"></i> <b>Data recebimento: </b> {{itens.dtarecebimento}}</p>      
+      <p><i class="icon ion-person-stalker"></i> <b>Infração: </b> {{itens.strinfracao}}</p>
+	  <p><i class="icon ion-person"></i> <b>Defensor: </b> {{itens.strfuncionario}}</p>
+	  
+	</ion-item>
+
+<ion-item class="item-divider">
+		<i class="fa fa-users"></i> Acordo/Mediação
+	</ion-item>
+	
+	<ion-item ng-repeat="itens in item_historicoacordomediacao">
+      <p><i class="icon ion-forward"></i> <b>Data: </b> {{itens.dtaacordo}}</p>
+      <p><i class="icon ion-forward"></i> <b>Reclamado: </b> {{itens.strreclamado}}</p>      
+      <p><i class="icon ion-person-stalker"></i> <b>Assunto: </b> {{itens.stracordo}}</p>
+	  <p><i class="icon ion-person"></i> <b>Funcionário: </b> {{itens.strfuncionario}}</p>
+	  
+	</ion-item>

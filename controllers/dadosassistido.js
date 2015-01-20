@@ -47,7 +47,7 @@ app.controller("DadosassistidoCtrl",function($ionicLoading,$scope,Authenticate,$
             
         }
         
-    }
+    } 
   
 })
 

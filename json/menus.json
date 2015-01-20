@@ -1,8 +1,8 @@
 [
 		{"name":"Página Principal","href":"/","icon":"fa fa-home"},
 		{"name":"Agenda","href":"/agenda","icon":"fa fa-calendar"},
-		{"name":"Histórico do Assistido.","href":"/historico","icon":"fa fa-user"},
-		{"name":"Dados do Assistido.","href":"/dadosassistido","icon":"fa fa-user"},
+		{"name":"Histórico do Assistido","href":"/historico","icon":"fa fa-user"},
+		{"name":"Dados do Assistido","href":"/dadosassistido","icon":"fa fa-user"},
 		{"name":"Petições","href":"/peticao","icon":"fa fa-clipboard"},		
 		{"name":"Documentos Diversos","href":"/docsdiversos","icon":"fa fa-file-text-o"},
 		{"name":"Acordos e Mediações","href":"/acordoemediacao","icon":"fa fa-files-o"},

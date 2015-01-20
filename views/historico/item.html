@@ -12,7 +12,7 @@
 		<i class="fa fa-users"></i> Atendimentos
 	</ion-item>
 	
-	<ion-item ng-repeat="itens in item_atendimentos">
+	<ion-item ng-repeat	="itens in item_atendimentos">
       <p><i class="icon ion-forward"></i> <b>Data: </b> {{itens.Data}}</p>
       <p><i class="icon ion-forward"></i> <b>Horario: </b> {{itens.Horario}}</p>      
       <p><i class="icon ion-person-stalker"></i> <b>Tipo Atendimento: </b> {{itens.Tipo}}</p>
@@ -25,7 +25,7 @@
 	</ion-item>
 	
 	<ion-item ng-repeat="itens in item_historicopeticoes">
-      <p><i class="icon ion-forward"></i> <b>Data: </b> {{itens.Data}}</p>
+      <p><i class="icon ion-forward"></i> <b>Data: </b> {{itens.dtadocumento}}</p>
       <p><i class="icon ion-forward"></i> <b>Número Petição: </b> {{itens.intnumpeticaoid}}</p>      
       <p><i class="icon ion-person-stalker"></i> <b>Número Processo: </b> {{itens.intnumprocesso}}</p>
 	  <p><i class="icon ion-person"></i> <b>Defensor: </b> {{itens.strfuncionario}}</p>
@@ -37,8 +37,8 @@
 	</ion-item>
 	
 	<ion-item ng-repeat="itens in item_historicoaudiencias">
-      <p><i class="icon ion-forward"></i> <b>Data: </b> {{itens.Data}}</p>
-      <p><i class="icon ion-forward"></i> <b>NParticipação: </b> {{itens.participacao}}</p>      
+      <p><i class="icon ion-forward"></i> <b>Data: </b> {{itens.dtaaudiencia}}</p>
+      <p><i class="icon ion-forward"></i> <b>Participação: </b> {{itens.participacao}}</p>      
       <p><i class="icon ion-person-stalker"></i> <b>Número Processo: </b> {{itens.processo}}</p>
 	  <p><i class="icon ion-person"></i> <b>Defensor: </b> {{itens.funcionario}}</p>
 	  

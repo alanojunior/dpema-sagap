@@ -10,6 +10,7 @@
 		{"name":"Audiência","href":"/audiencia","icon":"fa fa-gavel"},
 		{"name":"Júri","href":"/juri","icon":"fa fa-gavel"},
 		{"name":"Intimações","href":"/intimacao","icon":"fa fa-bullhorn"},
+		{"name":"Atividades Externas","href":"/atividadesexternas","icon":"fa fa-bullhorn"},
 		{"name":"Sessões do Conselho","href":"/sessoes","icon":"fa fa-university"}
 
 

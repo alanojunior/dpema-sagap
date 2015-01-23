@@ -187,6 +187,11 @@ app.config(function($stateProvider,$urlRouterProvider,$httpProvider,APP){
                 templateUrl:APP.VIEWS+'/intimacao/item.html',
                 controller:"IntimacaoItemController"
             })
+            .state('atividadesexternas',{
+                url:"/atividadesexternas",
+                templateUrl:APP.VIEWS+'/atividadesexternas/index.html',
+                controller:"AtividadesCtrl"
+            })
             .state('configuracaoeditar',{
                 url:"/configuracao/index",
                 templateUrl:APP.VIEWS+'/configuracao/index.html',

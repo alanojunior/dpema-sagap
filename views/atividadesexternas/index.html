@@ -1,0 +1,36 @@
+<ion-header-bar align-title="center" class="bar-stable sub-header">
+ 	<h1 class="title">Atividades externas</h1>
+  </ion-header-bar>
+<br />
+<br />
+<br />
+<ion-list>
+ 
+	<ion-item ng-repeat="item in itens">
+
+	<ion-item class="item-divider">
+		<i class="fa fa-user"></i> {{item.nome}}
+	</ion-item>
+	<br />
+
+	<p>
+		<h3 class="item-divider">Titulo: {{item.strtitulo}}</h3>
+	</p>
+	<p>
+		<h3>Data: {{item.dtaevento}}</h3>
+	</p>
+	<p>
+		<h3>Local: {{item.strlocal}}</h3>
+	</p>
+	<p>
+		<h3>Horário: de {{item.hrentradaevento}} ás {{item.hrsaidaevento}}</h3>
+	</p>
+	<p>
+		<h3>Descrição: {{item.strdescricao}}</h3>
+	</p>
+	<p>
+		<h3>Observações: {{item.strobservacao}}</h3>
+	</p>
+	</ion-item>
+
+</ion-list>

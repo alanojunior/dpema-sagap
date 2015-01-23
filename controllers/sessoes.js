@@ -1,4 +1,4 @@
-'use trict';
+'use strict';
 
 
 app.controller("SessoesCtrl",function($ionicLoading,$scope,Authenticate,$pull,APP,$http,$consulta,$state){

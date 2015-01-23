@@ -1,4 +1,4 @@
-'use trict';
+'use strict';
 
 
 app.controller("TutelaCtrl",function($cordovaCamera,$ionicLoading,$scope,Authenticate,$pull,APP,$http,$consulta,$state){

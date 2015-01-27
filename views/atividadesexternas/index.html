@@ -4,14 +4,14 @@
 <br />
 <br />
 <br />
-<ion-list>
- 
-	<ion-item ng-repeat="item in itens">
 
-	<ion-item class="item-divider">
+<ion-list>
+
+	<ion-item ng-repeat="item in itens|limitTo:1" class="item-divider">
 		<i class="fa fa-user"></i> {{item.nome}}
 	</ion-item>
-	<br />
+ 
+	<ion-item ng-repeat="item in itens">
 
 	<p>
 		<h3 class="item-divider">Titulo: {{item.strtitulo}}</h3>

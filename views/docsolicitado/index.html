@@ -1,0 +1,37 @@
+<ion-header-bar align-title="center" class="bar-stable sub-header">
+ 
+  <h1 class="title">Documenstos Solicitados - Consulta</h1>
+  </ion-header-bar> 
+  <br>
+  <br>
+ {{msg}}
+ <label class="item item-input item-select">
+    <div class="input-label">
+      Pesquisar Por:
+    </div>
+    
+    <select ng-model="tipo" ng-init="tipo='numero'">
+      <option value="numero" selected>CPF</option>
+      <option value="nome">Nome do assistido </option>
+    </select>
+
+  </label>
+<br>
+
+<div class="list list-inset">  
+
+<label ng-show="tipo == 'numero'" class="item item-input">
+  <span class="input-label">Número CPF: </span>
+  <input ng-model="valor['numero']" type="text" />
+</label>
+
+<label ng-show="tipo == 'nome'" class="item item-input">
+  <span class="input-label">Nome do Assistido: </span>
+  <input ng-model="valor['assistido']" type="text" />
+</label>
+
+<button ng-click="buscar(tipo,valor)" class="button button-block button-dark">
+      Buscar
+       <i class="fa fa-search"></i>
+    </button>
+</div>

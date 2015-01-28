@@ -197,5 +197,25 @@ app.config(function($stateProvider,$urlRouterProvider,$httpProvider,APP){
                 templateUrl:APP.VIEWS+'/configuracao/index.html',
                 controller:"ConfigController"
             })
+            .state('agendadefensor',{
+                url:"/agendadefensor",
+                templateUrl:APP.VIEWS+'/agendadefensor/index.html',
+                controller:"AgendadefensorCtrl" 
+            })
+            .state('docsolicitado',{
+                url:"/docsolicitado",
+                templateUrl:APP.VIEWS+'/docsolicitado/index.html',
+                controller:"DocsolicitadoCtrl"
+            })
+            .state('docsolicitadolista',{
+                url:"/docsolicitado/lista",
+                templateUrl:APP.VIEWS+'/docsolicitado/lista.html',
+                controller:"DocsolicitadoListaController"
+            })           
+            .state('docsolicitadoItem',{
+                url:"/docsolicitado/item",
+                templateUrl:APP.VIEWS+'/docsolicitado/item.html',
+                controller:"DocsolicitadoItemController"
+            })
 
 })

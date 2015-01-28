@@ -1,0 +1,25 @@
+<ion-header-bar align-title="center" class="bar-stable sub-header">
+  <div class="buttons">
+    <a href="#/docsolicitado/lista" class="button fa fa-arrow-left button-clear"> Voltar </a>
+  </div>
+ 	<h1 class="title">Documentos Solicitados - Item</h1>
+  </ion-header-bar>
+<br>
+<br>
+<br>
+<ion-list>
+	  <ion-item ng-repeat="item in itens">
+
+	  <p><i class="ion-calendar"></i> <b>Data: </b> {{item.data}}</p>
+	  <p><i class="ion-clock"></i> <b>Hora: </b> {{item.hora}}</p>
+	  <p><i class="ion-compose"></i> <b>Atendimento: </b> {{item.atendimento}}</p>
+	  <p><i class="ion-person"></i> <b>Funcionário: </b> {{item.funcionario}}</p>
+	  <p><i class="ion-briefcase"></i> <b>Função: </b> {{item.funcao}}</p>
+
+	   <a ng-href="{{item.strdocumento != null ? '10.98.1.2/SAGAP/path/extensao/pdf/pdf.pdf':servidor+ 'SAGAP_MOBILE/index.php/docsolicitado/verdocsolicitado/'+item.idatendimento}}" target="_blank" class="button button-block button-balanced" onclick="window.open(this.href, '_system', 'location=yes'); return false;">
+      Ver Documento
+    </a>	 
+		
+	  </ion-item>
+	
+</ion-list>

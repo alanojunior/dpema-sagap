@@ -1,9 +1,9 @@
 [
 		{"name":"Página Principal","href":"/","icon":"fa fa-home"},
 		{"name":"Agenda","href":"/agenda","icon":"fa fa-calendar"},
-		{"name":"Agenda Defensor","href":"/agendadefensor","icon":"fa fa-calendar"},
-		{"name":"Histórico do Assistido","href":"/historico","icon":"fa fa-user"},
+		{"name":"Agenda do Defensor","href":"/agendadefensor","icon":"fa fa-calendar"},
 		{"name":"Dados do Assistido","href":"/dadosassistido","icon":"fa fa-user"},
+		{"name":"Histórico do Assistido","href":"/historico","icon":"fa fa-user"},
 		{"name":"Petições","href":"/peticao","icon":"fa fa-clipboard"},		
 		{"name":"Documentos Diversos","href":"/docsdiversos","icon":"fa fa-file-text-o"},
 		{"name":"Documentos Solicitados","href":"/docsolicitado","icon":"fa fa-file-text-o"},

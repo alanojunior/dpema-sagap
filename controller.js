@@ -1,11 +1,12 @@
 'use strict';
 
-app.controller('Controller',function($scope,Authenticate,$ionicLoading,$ionicSideMenuDelegate,$http,APP){
+app.controller('Controller',function($scope,Authenticate,$ionicLoading,$ionicSideMenuDelegate,$http,APP,$consulta,$pull){
 
 		
 	 if(!Authenticate.getUser()){
   		$scope.tmpl = Authenticate.tmpl('login');
 	  }else{
+
 	  	$scope.tmpl = Authenticate.tmpl('layout');
 
 	  }	
@@ -53,7 +54,7 @@ app.controller('Controller',function($scope,Authenticate,$ionicLoading,$ionicSid
 		$ionicLoading.show()
 		if(Authenticate.valida(user) && Authenticate.valida(pass)){
 			Authenticate.login(APP.SERVIDOR+'login/index/'+user+'/'+pass).then(function(data){
-				$scope.tmpl = Authenticate.tmpl('layout')
+				$scope.tmpl = Authenticate.tmpl('layout');
 			},function(error){
 				$scope.msg = error;
 			})
@@ -79,10 +80,24 @@ app.controller('Controller',function($scope,Authenticate,$ionicLoading,$ionicSid
 		$ionicSideMenuDelegate.toggleRight();
 	};
 
-	$http.get('app/json/menus.json')
+	/*$http.get('app/json/menus.json')
 	.success(function(data){
 		$scope.menus = data;
-	})
-	
+	});*/
 
-})	
+	/*$hhtp.get(APP.SERVIDOR+'consultaMobile/index/login/validate_SAGAP/'+intfuncionariofuncaoid)
+	.success(function(data){
+		$scope.user = data;
+	});*/
+
+	var user = Authenticate.getUser('intfuncionariofuncaoid');
+	console.log(user);
+	$consulta.get('menu','buscar',19,0)
+	.then(function(data){
+		$scope.menus = data;
+		console.log($scope.menus);
+	},function(erro){
+		alert(erro);
+	});
+
+});

@@ -61,9 +61,7 @@ app.controller('Controller',function($scope,Authenticate,$ionicLoading,$ionicSid
 
 		}else{
 			$scope.msg = "Preencha os campos Por Favor!";
-		}
-		
-		
+		}		
 
 	}
 
@@ -79,25 +77,5 @@ app.controller('Controller',function($scope,Authenticate,$ionicLoading,$ionicSid
 	$scope.toggleRight = function() {
 		$ionicSideMenuDelegate.toggleRight();
 	};
-
-	/*$http.get('app/json/menus.json')
-	.success(function(data){
-		$scope.menus = data;
-	});*/
-
-	/*$hhtp.get(APP.SERVIDOR+'consultaMobile/index/login/validate_SAGAP/'+intfuncionariofuncaoid)
-	.success(function(data){
-		$scope.user = data;
-	});*/
-
-	var user = Authenticate.getUser('intfuncionariofuncaoid');
-	console.log(user);
-	$consulta.get('menu','buscar',19,0)
-	.then(function(data){
-		$scope.menus = data;
-		console.log($scope.menus);
-	},function(erro){
-		alert(erro);
-	});
 
 });
